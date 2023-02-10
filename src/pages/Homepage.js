@@ -17,8 +17,8 @@ const Homepage = (props) => {
     let types = ["whiskey", "wine", "chicken"]
     const galleryCardsToBeRendered = itemsFromDataFile.map(collection => {
       let temp = (
-        <Link onClick={() => onGalleryCardClicked(collection)} to={`/product/${types[i]}`}>
-          <GalleryCard key={types[i]} type={types[i]} items={collection} />
+        <Link key={types[i]} type={types[i]}  onClick={() => onGalleryCardClicked(collection)} to={`/product/${types[i]}`}>
+          <GalleryCard items={collection} />
         </Link>
       )
       i = i + 1;
